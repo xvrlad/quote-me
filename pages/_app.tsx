@@ -1,6 +1,8 @@
 import type { AppProps } from "next/app";
 import "@fontsource/poppins";
+import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
+import theme from "../app/common/theme/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Quote Me</title>
       </Head>
-      <Component {...pageProps} />;
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </>
   );
 }

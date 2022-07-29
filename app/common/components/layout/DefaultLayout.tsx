@@ -4,7 +4,15 @@ import { ScriptProps } from "next/script";
 
 const DefaultLayout: React.FC<ScriptProps> = ({ children }) => {
   return (
-    <Flex bg="lightblue" height="100vh">
+    <Flex
+      bg="lightblue"
+      height="50vh"
+      width="auto"
+      dir="column"
+      p="10"
+      align="center"
+      justify="center"
+    >
       {children}
     </Flex>
   );
